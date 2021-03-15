@@ -19,5 +19,5 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd ${{ secrets.DIR }}
-            git pull --force
+            git pull --rebase
             hugo --minify
