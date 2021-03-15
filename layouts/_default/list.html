@@ -1,0 +1,9 @@
+{{ define "main" }}
+	<header>
+		<h1>{{ .Title }}</h1>
+		{{ partial "menus/main" . }}
+		<p>{{ .Description }}</p>
+	</header>
+
+	{{ partial "lists/pages" . }}
+{{ end }}

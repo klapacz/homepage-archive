@@ -1,0 +1,16 @@
+{{ define "main" }}
+	<header>
+		{{ partial "menus/main" .}}
+		<h1>{{ .Title }}</h1>
+		{{ if .Description }}<p>{{ .Description }}</p>{{ end }}
+
+		{{ partial "lists/tags" .}}
+		{{ partial "date" .}}
+	</header>
+
+	<article>
+		{{ .Content }}
+	</article>
+	
+	{{ partial "edit" . }}
+{{ end }}

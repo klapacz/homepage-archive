@@ -1,0 +1,13 @@
+:root {
+	--text: #0c0c0c;
+	--bg: #fcfcfc;
+	--primary: #005cc5;
+	--muted: #555;
+
+	@media (prefers-color-scheme: dark) {
+		--text: #fcfcfc;
+		--bg: #1a1a1a;
+		--primary: #2996df;
+		--muted: #aaa;
+	}
+}

@@ -1,0 +1,6 @@
+<section>
+	{{ $editURL := printf "%s/edit/master/content/%s" .Site.Params.Repo .Path }}
+	{{ $commitsURL := printf "%s/commits/master/content/%s" .Site.Params.Repo .Path }}
+	<a href="{{ $editURL }}">Edit this page</a>
+	<a href="{{ $commitsURL }}">History</a>
+</section>

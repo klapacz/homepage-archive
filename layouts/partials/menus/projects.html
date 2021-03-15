@@ -1,0 +1,11 @@
+<section class="tree">
+	<h2>My projects</h2>
+
+	<ul>
+		{{ range .Site.Menus.projects }}
+			<li>
+				{{ .Pre }}<a href="{{ .URL }}">{{ .Name }}</a>{{ .Post }}
+			</li>
+		{{ end }}
+	</ul>
+</section>

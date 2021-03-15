@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{{ block "title" . }}
+			{{ if .Title }} {{ .Title }} &ndash; {{ end }}
+		{{ end }}
+		{{ .Site.Title }}
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="{{ .Site.Params.Author }}">
+	<meta name="description" content="{{if .Description }} {{ .Description }} {{ else }} {{ .Site.Params.Description }} {{ end }}">
+
+	{{ $scss := resources.Get "scss/main.scss" }}
+	{{ $style := $scss | resources.ToCSS (dict "outputStyle" "compressed" ) }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+<body>
+	{{ block "main" . }}{{ end }}
+	<footer>
+		&copy; {{ now.Year }} {{ .Site.Params.Author }}
+	</footer>
+</body>
+</html>
