@@ -7,6 +7,9 @@ params:
   mail: lapacz.kornel@gmail.com
 menu:
   projects:
+    - identifier: gmnigit
+      name: gmnigit
+      url: https://sr.ht/~kornellapacz/gmnigit/
     - identifier: words
       name: Words
       url: https://kornellapacz.github.io/words
@@ -18,6 +21,9 @@ menu:
     - identifier: github
       name: Github
       url: https://github.com/kornellapacz
+    - identifier: sourcehut
+      name: Sourcehut
+      url: https://sr.ht/~kornellapacz
 
 languageCode: en
 taxonomies:
