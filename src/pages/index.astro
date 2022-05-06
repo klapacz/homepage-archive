@@ -1,12 +1,32 @@
 ---
 import Layout from '../components/Layout.astro';
+import { Icon } from 'astro-icon'
+
+type IconName = string
+type Text = string
+type Url = string
+
+const links: [IconName, Text, Url][] = [
+    ['mdi:github', 'GitHub', 'https://github.com/klapacz'],
+    ['mdi:gmail', 'Email', 'mailto:lapacz.kornel@gmail.com'],
+    ['mdi:circle-outline', 'Sourcehut', 'https://sr.ht/~kornellapacz/']
+]
 ---
 
 <Layout title="Homepage - Korneliusz Łapacz">
 	<main class="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <div class="mt-2">
-            <h1 class="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline">Korneliusz Łapacz</h1>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Software engineer. Neovim user. UNIX enthusiast.</p>
-        </div>
+        <header class="my-2">
+            <h1 class="text-2xl font-bold text-gray-700 dark:text-white">Korneliusz Łapacz</h1>
+            <p class="mt-4 text-gray-600 dark:text-gray-300">Software engineer. Neovim user. UNIX enthusiast.</p>
+        </header>
+
+        <nav class="flex flex-col justify-between flex-1 mt-6">
+            {links.map(([name, text, href]) => (
+                <a class="flex items-center px-4 py-2 text-gray-700 bg-gray-200 rounded-md dark:bg-gray-700 dark:text-gray-200 mb-2 hover:underline" target="_blank" {href}>
+                    <Icon {name} class="w-5 h-5"/>
+                    <span class="mx-4 font-medium">{text}</span>
+                </a>
+            ))}
+        </nav>
     </main>
 </Layout>
