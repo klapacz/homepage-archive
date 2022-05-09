@@ -1,0 +1,17 @@
+<script>
+import 'dark-mode-toggle'
+
+const toggle = document.querySelector('dark-mode-toggle');
+const root = document.documentElement;
+
+// Set or remove the `dark` class the first time.
+toggle.mode === 'dark' ? root.classList.add('dark') : root.classList.remove('dark');
+
+// Listen for toggle changes (which includes `prefers-color-scheme` changes)
+// and toggle the `dark` class accordingly.
+toggle.addEventListener('colorschemechange', () => {
+    root.classList.toggle('dark', toggle.mode === 'dark');
+});
+</script>
+
+<dark-mode-toggle />
