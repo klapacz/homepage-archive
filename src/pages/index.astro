@@ -13,10 +13,29 @@ const links: [IconName, Text, Url][] = [
 ]
 ---
 
+<script>
+import 'dark-mode-toggle'
+
+const toggle = document.querySelector('dark-mode-toggle');
+const root = document.documentElement;
+
+// Set or remove the `dark` class the first time.
+toggle.mode === 'dark' ? root.classList.add('dark') : root.classList.remove('dark');
+
+// Listen for toggle changes (which includes `prefers-color-scheme` changes)
+// and toggle the `dark` class accordingly.
+toggle.addEventListener('colorschemechange', () => {
+    root.classList.toggle('dark', toggle.mode === 'dark');
+});
+</script>
+
 <Layout title="Homepage - Korneliusz Łapacz">
 	<main class="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
         <header class="my-2">
-            <h1 class="text-2xl font-bold text-gray-700 dark:text-white">Korneliusz Łapacz</h1>
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-700 dark:text-white">Korneliusz Łapacz</h1>
+                <dark-mode-toggle />
+            </div>
             <p class="mt-4 text-gray-600 dark:text-gray-300">Software engineer. Neovim user. UNIX enthusiast.</p>
         </header>
 
