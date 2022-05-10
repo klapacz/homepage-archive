@@ -2,13 +2,12 @@ import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
 	darkMode: 'class',
-	// content: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
 	extract: {
-		include: ['./src/**/*.{vue,html,jsx,tsx,astro}'],
+		include: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
 		exclude: ['node_modules', '.git'],
     },
-	// theme: {
-	// 	extend: {},
-	// },
-	// plugins: [],
+	theme: {
+		extend: {},
+	},
+	plugins: [],
 })
