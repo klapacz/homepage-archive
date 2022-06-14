@@ -6,16 +6,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "analysis": "windicss-analysis"
+    "preview": "astro preview"
   },
   "devDependencies": {
+    "@astrojs/tailwind": "^0.2.1",
     "astro": "^1.0.0-beta.20",
     "astro-icon": "^0.7.1",
     "dark-mode-toggle": "^0.10.0",
-    "vite": "^2.9.8",
-    "vite-plugin-windicss": "^1.8.4",
-    "windicss": "^3.5.2",
-    "windicss-analysis": "^0.3.5"
+    "vite": "^2.9.8"
   }
 }
