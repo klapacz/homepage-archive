@@ -4,7 +4,6 @@ specifiers:
   '@astrojs/tailwind': ^0.2.1
   astro: ^1.0.0-beta.20
   astro-icon: ^0.7.1
-  dark-mode-toggle: ^0.10.0
   tailwindcss: ^3.1.2
   vite: ^2.9.8
 
@@ -12,7 +11,6 @@ devDependencies:
   '@astrojs/tailwind': 0.2.1
   astro: 1.0.0-beta.26
   astro-icon: 0.7.1
-  dark-mode-toggle: 0.10.0
   tailwindcss: 3.1.2
   vite: 2.9.8
 
@@ -923,10 +921,6 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       css-tree: 1.1.3
-    dev: true
-
-  /dark-mode-toggle/0.10.0:
-    resolution: {integrity: sha512-/yV41a7aaEtsBII8sFn1veUCi2HJQSSgI94sG1fDOoHcfoZkYgwmhAhkMmHW0EwevgRWvlTjunRc2goh8mu4QA==}
     dev: true
 
   /data-uri-to-buffer/4.0.0:
