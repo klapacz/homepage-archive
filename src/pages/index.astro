@@ -27,7 +27,7 @@ const links: [IconName, Text, Url][] = [
 
         <nav class="flex flex-col justify-between flex-1 mt-6">
             {links.map(([name, text, href]) => (
-                <a rel="noopener" class="flex items-center px-4 py-2 text-gray-700 bg-gray-200 rounded-md mb-2 hover:underline dark:(bg-gray-700 text-gray-200)" target="_blank" {href}>
+                <a rel="noopener" class="flex items-center px-4 py-2 text-gray-700 bg-gray-200 rounded-md mb-2 hover:underline dark:bg-gray-700 dark:text-gray-200" target="_blank" {href}>
                     <Icon {name} class="w-5 h-5"/>
                     <span class="mx-4 font-medium">{text}</span>
                 </a>
